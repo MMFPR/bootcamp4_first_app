@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../data/models/login_request.dart';
 import '../../data/services/auth_api_service.dart';
-import '../widgets/app_text_from.dart';
+import '../widgets/app_text_field.dart';
 import 'home_screen.dart';
 import 'register_screen.dart';
 
@@ -79,17 +79,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: 20,
                 ),
-                AppTextFrom(
+                AppTextField(
                   controller: _email,
-                  lable: 'Email',
+                  label: 'Email',
                   icon: Icon(Icons.email),
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                AppTextFrom(
+                AppTextField(
                   controller: _password,
-                  lable: 'Password',
+                  label: 'Password',
                   icon: Icon(Icons.password),
                   obscure: true,
                 ),

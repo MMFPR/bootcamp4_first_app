@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class AppTextFrom extends StatelessWidget {
+class AppTextField extends StatelessWidget {
   final TextEditingController controller;
-  final String lable;
+  final String label;
   final Icon icon;
   final String? Function(String?)? validator;
   final bool obscure;
   final TextInputType? keyboardType;
 
-  const AppTextFrom({
+  const AppTextField({
     super.key,
     required this.controller,
-    required this.lable,
+    required this.label,
     required this.icon,
     this.validator,
     this.obscure = false,
@@ -25,13 +25,13 @@ class AppTextFrom extends StatelessWidget {
       controller: controller,
       obscureText: obscure,
       validator: validator ??
-              (value) {
+          (value) {
             if (value == null || value.trim().isEmpty) return 'الحقل مطلوب';
             return null;
           },
       decoration: InputDecoration(
           border: OutlineInputBorder(),
-          labelText: '${lable}',
+          labelText: '${label}',
           prefixIcon: icon),
     );
   }
